@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiCollectionView.SelectionColor.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MauiCollectionView.SelectionColor.Models">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine"
+                Source="dotnet_bot.png" />
+
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Categories" />
+
+            <BoxView HeightRequest="1" />
+
+            <CollectionView x:Name="collectionView" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:CategoryModel">
+                        <Border
+                            Margin="10"
+                            Padding="10"
+                            StrokeShape="RoundRectangle 10">
+                            <Label
+                                x:Name="categoryName"
+                                FontSize="15"
+                                Text="{Binding Name}" />
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup>
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Green" />
+                                            <Setter TargetName="categoryName" Property="Label.TextColor" Value="White" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="White" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
