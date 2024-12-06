@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionView.SelectionColor", "MauiCollectionView.SelectionColor\MauiCollectionView.SelectionColor.csproj", "{D735ECFF-D5C5-44E1-B472-F16962CE029D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionView.MultiSelection", "MauiCollectionView.MultiSelection\MauiCollectionView.MultiSelection.csproj", "{383DA480-56AA-4DA1-A32F-2529251644D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +15,13 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D735ECFF-D5C5-44E1-B472-F16962CE029D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D735ECFF-D5C5-44E1-B472-F16962CE029D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D735ECFF-D5C5-44E1-B472-F16962CE029D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{D735ECFF-D5C5-44E1-B472-F16962CE029D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D735ECFF-D5C5-44E1-B472-F16962CE029D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383DA480-56AA-4DA1-A32F-2529251644D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383DA480-56AA-4DA1-A32F-2529251644D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383DA480-56AA-4DA1-A32F-2529251644D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383DA480-56AA-4DA1-A32F-2529251644D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
