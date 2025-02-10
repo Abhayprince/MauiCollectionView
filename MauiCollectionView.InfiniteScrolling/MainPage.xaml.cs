@@ -11,8 +11,7 @@ public partial class MainPage : ContentPage
     public MainPage(DataViewModel viewModel)
     {
         InitializeComponent();
-        this._viewModel = viewModel;
-        BindingContext = _viewModel;
+        BindingContext = viewModel;
     }
 
 }

@@ -13,13 +13,22 @@ public class EmployeeModel
     public string Team { get; set; }
 
     private static string[] Teams = ["Development", "Designing", "Testing", "Client Implementation", "Sales"];
+
+    private const int MaxData = 100;
+    private static int _dataSent;
     public static EmployeeModel[] GetData(int count = 20)
     {
+        if (_dataSent >= MaxData)
+            return [];
+
         var faker = new Faker<EmployeeModel>()
             .RuleFor(e=> e.Name, f=> f.Name.FullName())
             .RuleFor(e=> e.Team, f=> f.PickRandom(Teams));
 
         var employees = faker.Generate(count);
+        
+        _dataSent += count;
+
 
         return [..employees];
     }

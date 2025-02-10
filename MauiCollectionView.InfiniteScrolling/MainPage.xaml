@@ -7,13 +7,16 @@
     xmlns:vm="clr-namespace:MauiCollectionView.InfiniteScrolling.ViewModels"
     Title="Infinite Scrolling Collection View"
     x:DataType="vm:DataViewModel"
-    Shell.FlyoutBehavior="Disabled"
     BackgroundColor="#E9E9E9"
     Shell.BackgroundColor="Purple"
+    Shell.FlyoutBehavior="Disabled"
     Shell.TitleColor="White">
 
     <Grid Padding="15">
-        <CollectionView ItemsSource="{Binding Employees}">
+        <CollectionView
+            ItemsSource="{Binding Employees}"
+            RemainingItemsThreshold="5"
+            RemainingItemsThresholdReachedCommand="{Binding GetEmployeesCommand}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:EmployeeModel">
                     <Border
@@ -22,7 +25,10 @@
                         BackgroundColor="LightBlue"
                         StrokeShape="RoundRectangle 5"
                         StrokeThickness="0">
-                        <Grid ColumnDefinitions="*, auto" RowDefinitions="Auto, Auto" RowSpacing="5">
+                        <Grid
+                            ColumnDefinitions="*, auto"
+                            RowDefinitions="Auto, Auto"
+                            RowSpacing="5">
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="0"
@@ -39,10 +45,13 @@
                                 Grid.Column="0"
                                 Padding="10,2"
                                 BackgroundColor="DarkBlue"
-                                StrokeShape="RoundRectangle 5"
                                 HorizontalOptions="Start"
+                                StrokeShape="RoundRectangle 5"
                                 StrokeThickness="0">
-                                <Label FontSize="11" Text="{Binding Team}" TextColor="White" />
+                                <Label
+                                    FontSize="11"
+                                    Text="{Binding Team}"
+                                    TextColor="White" />
                             </Border>
                         </Grid>
                     </Border>
