@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionView.Selectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionView.MultiSelection", "MauiCollectionView.MultiSelection\MauiCollectionView.MultiSelection.csproj", "{383DA480-56AA-4DA1-A32F-2529251644D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionView.InfiniteScrolling", "MauiCollectionView.InfiniteScrolling\MauiCollectionView.InfiniteScrolling.csproj", "{D4FB8D56-BE83-426A-A3F2-2C05203C9E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{383DA480-56AA-4DA1-A32F-2529251644D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{383DA480-56AA-4DA1-A32F-2529251644D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{383DA480-56AA-4DA1-A32F-2529251644D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FB8D56-BE83-426A-A3F2-2C05203C9E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FB8D56-BE83-426A-A3F2-2C05203C9E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FB8D56-BE83-426A-A3F2-2C05203C9E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FB8D56-BE83-426A-A3F2-2C05203C9E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

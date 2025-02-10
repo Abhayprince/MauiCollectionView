@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiCollectionView.InfiniteScrolling.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MauiCollectionView.InfiniteScrolling.Models"
+    xmlns:vm="clr-namespace:MauiCollectionView.InfiniteScrolling.ViewModels"
+    Title="Infinite Scrolling Collection View"
+    x:DataType="vm:DataViewModel"
+    Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="#E9E9E9"
+    Shell.BackgroundColor="Purple"
+    Shell.TitleColor="White">
+
+    <Grid Padding="15">
+        <CollectionView ItemsSource="{Binding Employees}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:EmployeeModel">
+                    <Border
+                        Margin="0,5"
+                        Padding="10"
+                        BackgroundColor="LightBlue"
+                        StrokeShape="RoundRectangle 5"
+                        StrokeThickness="0">
+                        <Grid ColumnDefinitions="*, auto" RowDefinitions="Auto, Auto" RowSpacing="5">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                FontSize="16"
+                                Text="{Binding Name}" />
+                            <Label
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                VerticalOptions="Center">
+                                >
+                            </Label>
+                            <Border
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Padding="10,2"
+                                BackgroundColor="DarkBlue"
+                                StrokeShape="RoundRectangle 5"
+                                HorizontalOptions="Start"
+                                StrokeThickness="0">
+                                <Label FontSize="11" Text="{Binding Team}" TextColor="White" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
